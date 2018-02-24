@@ -1,13 +1,13 @@
 ﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Events.EventListViewModel>
 
-@foreach (var conference in Model.Events)
+@foreach (var e in Model.Events)
 {
     <div class="row">
         <div class="jumbotron clearfix">
-            <a href="@conference.Url" target="_blank">
-                <h2>@conference.Title</h2>
+            <a href="@e.Url" target="_blank">
+                <h2>@e.Title</h2>
             </a>
-            <h3>@conference.StartDate.ToString("dd-MM-yyyy") - @conference.EndDate.ToString("dd-MM-yyyy"), <cite>@conference.Location</cite>
+            <h3>@e.PrintPeriod("dd-MM-yyyy"), <cite>@e.City</cite>
             </h3>
         </div>
     </div>

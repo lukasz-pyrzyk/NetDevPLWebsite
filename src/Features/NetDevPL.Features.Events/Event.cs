@@ -18,10 +18,5 @@ namespace NetDevPL.Features.Events
         public DateTime StartDate { get; }
         public DateTime? EndDate { get; }
         public string City { get; }
-
-        public bool HasEnded()
-        {
-            return StartDate < DateTime.Now;
-        }
     }
 }

@@ -29,12 +29,16 @@ namespace NetDevPLWeb.Features.Events
             new LocalFileProvider(), new MeetupEventProvider()
         };
 
-        public Event[] GetEvents()
+        public EventViewModel[] GetEvents()
         {
             var tomorrow = DateTime.Today.AddDays(1);
             var events = GetEventsFromProvidersAsync().GetAwaiter().GetResult();
 
-            return events.Where(c => c.EndDate > tomorrow).OrderBy(c => c.StartDate).ToArray();
+            return events
+                .Where(e => !e.EndDate.HasValue || e.EndDate.Value > tomorrow)
+                .OrderBy(e => e.StartDate)
+                .Select(EventViewModel.FromEvent)
+                .ToArray();
         }
 
         private async Task<Event[]> GetEventsFromProvidersAsync()

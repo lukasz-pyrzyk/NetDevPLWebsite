@@ -70,7 +70,6 @@
     <Compile Include="Features\ConferenceVideos\ConferenceVideoViewModelTests.cs" />
     <Compile Include="Features\ConferenceVideos\ConferenceVideoSourceTests.cs" />
     <Compile Include="Features\Events\EventsSourceTests.cs" />
-    <Compile Include="Features\Events\EventTests.cs" />
     <Compile Include="Features\Events\LocalFileProviderTests.cs" />
     <Compile Include="Features\Events\MeetupProviderTests.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineListViewModelTests.cs" />

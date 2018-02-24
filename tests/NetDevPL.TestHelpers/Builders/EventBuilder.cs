@@ -8,7 +8,7 @@ namespace NetDevPL.TestHelpers.Builders
         private string _url;
         private string _title;
         private DateTime _startDate;
-        private DateTime? _endDate;
+        private DateTime _endDate;
         private string _city;
 
         public EventBuilder WithUrl(string url)
@@ -29,7 +29,7 @@ namespace NetDevPL.TestHelpers.Builders
             return this;
         }
 
-        public EventBuilder WithEndDate(DateTime? endDate)
+        public EventBuilder WithEndDate(DateTime endDate)
         {
             _endDate = endDate;
             return this;

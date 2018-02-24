@@ -32,7 +32,7 @@ namespace NetDevPL.Features.Events.Meetup
         public Event ToEvent()
         {
             var startTime = DateTime.Parse(LocalDate);
-            return new Event(Link, Name, startTime, startTime, Venue?.City);
+            return new Event(Link, Name, startTime, null, Venue?.City);
         }
     }
 }

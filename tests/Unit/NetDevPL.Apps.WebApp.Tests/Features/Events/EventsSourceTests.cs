@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using System;
+using FluentAssertions;
 using NetDevPLWeb.Features.Events;
 using Xunit;
 
@@ -18,7 +19,7 @@ namespace NetDevPL.Apps.WebApp.Tests.Features.Events
             // Assert
             foreach (var @event in events)
             {
-                @event.HasEnded().Should().BeFalse();
+                @event.StartDate.Should().BeAfter(DateTime.Now);
             }
         }
     }

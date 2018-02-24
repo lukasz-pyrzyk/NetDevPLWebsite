@@ -23,7 +23,7 @@ namespace NetDevPL.Apps.WebApp.Tests.Features.Events
             var @event = events.First();
             @event.City.Should().NotBeNullOrEmpty();
             @event.StartDate.Should().NotBe(default(DateTime));
-            @event.EndDate.Should().NotBeNull();
+            @event.EndDate.Should().BeNull();
             @event.Title.Should().NotBeNullOrEmpty();
             @event.Url.Should().NotBeNullOrEmpty();
         }
