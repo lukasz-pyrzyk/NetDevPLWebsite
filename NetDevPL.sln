@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Apps.BackgoundJobs", "src\Apps\NetDevPL.Apps.BackgoundJobs\NetDevPL.Apps.BackgoundJobs.csproj", "{B65243DF-06F7-4D47-A37B-4107BE289F00}"
 EndProject
@@ -49,6 +49,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.UserManagement", "src\Features\NetDevPL.Features.UserManagement\NetDevPL.Features.UserManagement.csproj", "{0D737739-AF64-4990-8C6C-F022D9C8553C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Apps.WebApp.Tests", "tests\Unit\NetDevPL.Apps.WebApp.Tests\NetDevPL.Apps.WebApp.Tests.csproj", "{E9C0944A-1E75-47D6-9234-956D019447CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetDevPL.Features.Events", "src\Features\NetDevPL.Features.Events\NetDevPL.Features.Events.csproj", "{AC8246A8-B741-4808-8BC2-AE334394EF11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -120,6 +122,10 @@ Global
 		{E9C0944A-1E75-47D6-9234-956D019447CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9C0944A-1E75-47D6-9234-956D019447CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9C0944A-1E75-47D6-9234-956D019447CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC8246A8-B741-4808-8BC2-AE334394EF11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8246A8-B741-4808-8BC2-AE334394EF11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8246A8-B741-4808-8BC2-AE334394EF11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8246A8-B741-4808-8BC2-AE334394EF11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -144,5 +150,9 @@ Global
 		{8C2FFEC0-8CAF-4E8D-951C-131656C43326} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
 		{0D737739-AF64-4990-8C6C-F022D9C8553C} = {457EF626-17F8-45DB-8FD7-101265927FEB}
 		{E9C0944A-1E75-47D6-9234-956D019447CC} = {FAD3515B-B10C-4380-81D7-43E437AB13CF}
+		{AC8246A8-B741-4808-8BC2-AE334394EF11} = {457EF626-17F8-45DB-8FD7-101265927FEB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34B4E086-ADE9-416B-8846-1F4B343B44FE}
 	EndGlobalSection
 EndGlobal

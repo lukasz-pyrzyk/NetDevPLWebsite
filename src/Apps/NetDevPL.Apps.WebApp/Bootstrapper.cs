@@ -63,13 +63,13 @@ namespace NetDevPLWeb
             base.ConfigureApplicationContainer(container);
 
             // var twitterProvider = new TwitterProvider(new ProviderParams { PublicApiKey = ConfigurationManager.AppSettings["TwitterApiId"], SecretApiKey = ConfigurationManager.AppSettings["TwitterApiSecret"] });
-            var facebookProvider = new FacebookProvider(new ProviderParams { PublicApiKey = ConfigurationManager.AppSettings["FacebookApiId"], SecretApiKey = ConfigurationManager.AppSettings["FacebookApiSecret"] });
+            // var facebookProvider = new FacebookProvider(new ProviderParams { PublicApiKey = ConfigurationManager.AppSettings["FacebookApiId"] ?? "", SecretApiKey = ConfigurationManager.AppSettings["FacebookApiSecret"] ?? "" });
             //var googleProvider = new GoogleProvider(new ProviderParams { PublicApiKey = ConfigurationManager.AppSettings["GoogleApiId"], SecretApiKey = ConfigurationManager.AppSettings["GoogleApiSecret"] });
 
             AuthenticationProviderFactory providerFactory = new AuthenticationProviderFactory();
 
             // providerFactory.AddProvider(twitterProvider);
-            providerFactory.AddProvider(facebookProvider);
+            // providerFactory.AddProvider(facebookProvider);
             // providerFactory.AddProvider(googleProvider);
             container.Register<IAuthenticationCallbackProvider>(new SampleAuthenticationCallbackProvider());
             container.Register<IJsonReader, JsonReader>();

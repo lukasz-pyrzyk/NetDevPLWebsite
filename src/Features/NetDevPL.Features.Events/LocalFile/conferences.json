@@ -1,0 +1,51 @@
+﻿[
+  {
+    "Url": "http://codeeurope.pl/",
+    "Title": "CodeEurope - Warszawa",
+    "StartDate": "7.12.2016",
+    "EndDate": "7.12.2016",
+    "City": "Warszawa"
+  },
+  {
+    "Url": "http://2017.boilingfrogs.pl",
+    "Title": "Boiling Frogs",
+    "StartDate": "25.02.2017",
+    "EndDate": "25.02.2017",
+    "City": "Wrocław"
+  },
+  {
+    "Url": "http://www.lambdadays.org/lambdadays2017",
+    "Title": "Lambda Days",
+    "StartDate": "9.02.2017",
+    "EndDate": "10.02.2017",
+    "City": "Kraków"
+  },
+  {
+    "Url": "http://2017.4developers.org.pl/",
+    "Title": "4Developers",
+    "StartDate": "3.04.2017",
+    "EndDate": "3.04.2017",
+    "City": "Warszawa"
+  },
+  {
+    "Url": "https://buff.ly/2wZZOoV",
+    "Title": "Moder Web Development",
+    "StartDate": "6.10.2017",
+    "EndDate": "6.10.2017",
+    "City": "Wrocław"
+  },
+  {
+    "Url": "http://programistok.org/",
+    "Title": "Programistok",
+    "StartDate": "7.10.2017",
+    "EndDate": "7.10.2017",
+    "City": "Białystok"
+  },
+  {
+    "Url": "http://net.developerdays.pl/",
+    "Title": ".net developer days",
+    "StartDate": "18.10.2017",
+    "EndDate": "20.10.2017",
+    "City": "Warszawa"
+  }
+]

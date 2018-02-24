@@ -1,45 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Nancy;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+using NetDevPL.Features.Events;
+using NetDevPL.Features.Events.LocalFile;
+using NetDevPL.Features.Events.Meetup;
 
-namespace NetDevPLWeb.Features.OfflineEvents
+namespace NetDevPLWeb.Features.Events
 {
     public sealed class EventsModule : NancyModule
     {
-        private readonly ConferencesSource _source = new ConferencesSource();
+        private readonly EventsSource _source = new EventsSource();
 
         public EventsModule()
         {
             Get["/Events"] = parameters =>
             {
-                var conferences = _source.GetConferences();
-                return View["EventsList", new ConferencesListViewModel(conferences, Request.Url)];
+                var events = _source.GetEvents();
+                return View["EventsList", new EventListViewModel(events, Request.Url)];
             };
         }
     }
 
-    public class ConferencesSource
+    public class EventsSource
     {
-        public List<Conference> GetConferences()
+        private readonly IEventProvider[] _providers =
+        {
+            new LocalFileProvider(), new MeetupEventProvider()
+        };
+
+        public Event[] GetEvents()
         {
             var tomorrow = DateTime.Today.AddDays(1);
-            string json = File.ReadAllText("Features/Events/conferences.json");
-            var conferences = JsonConvert.DeserializeObject<List<Conference>>(json, new IsoDateTimeConverter { DateTimeFormat = "d.M.yyyy" });
+            var events = GetEventsFromProvidersAsync().GetAwaiter().GetResult();
 
-            return conferences.Where(c => c.EndDate > tomorrow).OrderBy(c => c.StartDate).ToList();
+            return events.Where(c => c.EndDate > tomorrow).OrderBy(c => c.StartDate).ToArray();
         }
-    }
 
-    public class Conference
-    {
-        public string Url { get; set; }
-        public string Title { get; set; }
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public string Location { get; set; }
+        private async Task<Event[]> GetEventsFromProvidersAsync()
+        {
+            var tasks = _providers.Select(x => x.GetEventsAsync());
+            var eventsPerProvider = await Task.WhenAll(tasks);
+            return eventsPerProvider.SelectMany(e => e).ToArray();
+        }
     }
 }

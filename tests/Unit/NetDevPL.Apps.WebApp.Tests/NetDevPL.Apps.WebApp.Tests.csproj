@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentAssertions, Version=5.1.2.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\FluentAssertions.5.1.2\lib\net45\FluentAssertions.dll</HintPath>
+    </Reference>
     <Reference Include="Nancy, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Nancy.1.4.3\lib\net40\Nancy.dll</HintPath>
     </Reference>
@@ -41,6 +44,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,6 +69,10 @@
   <ItemGroup>
     <Compile Include="Features\ConferenceVideos\ConferenceVideoViewModelTests.cs" />
     <Compile Include="Features\ConferenceVideos\ConferenceVideoSourceTests.cs" />
+    <Compile Include="Features\Events\EventsSourceTests.cs" />
+    <Compile Include="Features\Events\EventTests.cs" />
+    <Compile Include="Features\Events\LocalFileProviderTests.cs" />
+    <Compile Include="Features\Events\MeetupProviderTests.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineListViewModelTests.cs" />
     <Compile Include="Features\LearnOnline\LearnOnlineSourceTests.cs" />
     <Compile Include="Features\Resources\ResourcesViewModelTests.cs" />
@@ -82,9 +92,17 @@
       <Project>{D5046E5A-35D1-46B4-8DF4-44764ACDA3EE}</Project>
       <Name>NetDevPL.Apps.WebApp</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\src\Features\NetDevPL.Features.Events\NetDevPL.Features.Events.csproj">
+      <Project>{ac8246a8-b741-4808-8bc2-ae334394ef11}</Project>
+      <Name>NetDevPL.Features.Events</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\src\Infrastructure\NetDevPL.Infrastructure.Helpers\NetDevPL.Infrastructure.Services.csproj">
       <Project>{94FB1895-3F7E-4049-AD5E-49618AA12FF2}</Project>
       <Name>NetDevPL.Infrastructure.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NetDevPL.TestHelpers\NetDevPL.TestHelpers.csproj">
+      <Project>{5aba53d4-ef59-4d96-9535-7e9fcedb245c}</Project>
+      <Name>NetDevPL.TestHelpers</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

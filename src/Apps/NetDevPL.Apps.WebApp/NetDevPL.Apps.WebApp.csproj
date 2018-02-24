@@ -93,7 +93,7 @@
     <Compile Include="Features\ConferenceVideos\ConferenceVideosViewModel.cs" />
     <Compile Include="Features\Contributors\ContributorsListViewModel.cs" />
     <Compile Include="Features\Contributors\ContributorsModule.cs" />
-    <Compile Include="Features\Events\ConferencesListViewModel.cs" />
+    <Compile Include="Features\Events\EventListViewModel.cs" />
     <Compile Include="Features\Facebook\FacebookPostsViewModel.cs" />
     <Compile Include="Features\Groups\GroupsModule.cs" />
     <Compile Include="Features\Events\EventsModule.cs" />
@@ -146,9 +146,6 @@
     <None Include="Features\ConferenceVideos\conferenceVideosList.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Features\Events\conferences.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <Content Include="Features\Events\Views\EventsList.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -199,6 +196,10 @@
     <ProjectReference Include="..\..\Features\NetDevPL.Features.Blogs\NetDevPL.Features.Blogs.csproj">
       <Project>{3AE17152-62B5-4900-A186-C4D48BFDAEC4}</Project>
       <Name>NetDevPL.Features.Blogs</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Features\NetDevPL.Features.Events\NetDevPL.Features.Events.csproj">
+      <Project>{AC8246A8-B741-4808-8BC2-AE334394EF11}</Project>
+      <Name>NetDevPL.Features.Events</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Features\NetDevPL.Features.Facebook\NetDevPL.Features.Facebook.csproj">
       <Project>{8FB3E6B7-B43E-4E28-988C-6BA87CDBA333}</Project>

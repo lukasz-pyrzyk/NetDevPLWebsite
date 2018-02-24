@@ -1,6 +1,6 @@
-﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.OfflineEvents.ConferencesListViewModel>
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<NetDevPLWeb.Features.Events.EventListViewModel>
 
-@foreach (var conference in Model.Conferences)
+@foreach (var conference in Model.Events)
 {
     <div class="row">
         <div class="jumbotron clearfix">
